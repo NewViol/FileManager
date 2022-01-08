@@ -127,9 +127,12 @@ namespace SimpleFileManager
         public void removeBackSlash()
         {
             string path = filePathTextBox.Text;
-            if(path.LastIndexOf("/") == path.Length - 1)
+            if (path.Length != 0)
             {
-                filePathTextBox.Text = path.Substring(0, path.Length - 1);
+                if (path.LastIndexOf("/") == path.Length - 1)
+                {
+                    filePathTextBox.Text = path.Substring(0, path.Length - 1);
+                }
             }
         }
 

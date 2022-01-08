@@ -34,11 +34,11 @@
             this.goButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.iconList = new System.Windows.Forms.ImageList(this.components);
-            this.label1 = new System.Windows.Forms.Label();
-            this.fileNameLabel = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.fileTypeLabel = new System.Windows.Forms.Label();
             this.filePathTextBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.fileTypeLabel = new System.Windows.Forms.Label();
+            this.fileNameLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // backButton
@@ -90,42 +90,6 @@
             this.iconList.Images.SetKeyName(9, "Без названия (4).png");
             this.iconList.Images.SetKeyName(10, "Без названия (3).png");
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 610);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 17);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "FileName";
-            // 
-            // fileNameLabel
-            // 
-            this.fileNameLabel.AutoSize = true;
-            this.fileNameLabel.Location = new System.Drawing.Point(109, 610);
-            this.fileNameLabel.Name = "fileNameLabel";
-            this.fileNameLabel.Size = new System.Drawing.Size(18, 17);
-            this.fileNameLabel.TabIndex = 5;
-            this.fileNameLabel.Text = "--";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(996, 610);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "File Type";
-            // 
-            // fileTypeLabel
-            // 
-            this.fileTypeLabel.AutoSize = true;
-            this.fileTypeLabel.Location = new System.Drawing.Point(1061, 610);
-            this.fileTypeLabel.Name = "fileTypeLabel";
-            this.fileTypeLabel.Size = new System.Drawing.Size(18, 17);
-            this.fileTypeLabel.TabIndex = 7;
-            this.fileTypeLabel.Text = "--";
-            // 
             // filePathTextBox
             // 
             this.filePathTextBox.FormattingEnabled = true;
@@ -134,16 +98,52 @@
             this.filePathTextBox.Size = new System.Drawing.Size(509, 24);
             this.filePathTextBox.TabIndex = 8;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1009, 614);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(65, 17);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "File type:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(58, 611);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "File name:";
+            // 
+            // fileTypeLabel
+            // 
+            this.fileTypeLabel.AutoSize = true;
+            this.fileTypeLabel.Location = new System.Drawing.Point(1069, 614);
+            this.fileTypeLabel.Name = "fileTypeLabel";
+            this.fileTypeLabel.Size = new System.Drawing.Size(18, 17);
+            this.fileTypeLabel.TabIndex = 11;
+            this.fileTypeLabel.Text = "--";
+            // 
+            // fileNameLabel
+            // 
+            this.fileNameLabel.AutoSize = true;
+            this.fileNameLabel.Location = new System.Drawing.Point(124, 611);
+            this.fileNameLabel.Name = "fileNameLabel";
+            this.fileNameLabel.Size = new System.Drawing.Size(18, 17);
+            this.fileNameLabel.TabIndex = 12;
+            this.fileNameLabel.Text = "--";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1298, 651);
-            this.Controls.Add(this.filePathTextBox);
-            this.Controls.Add(this.fileTypeLabel);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(1298, 652);
             this.Controls.Add(this.fileNameLabel);
+            this.Controls.Add(this.fileTypeLabel);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.filePathTextBox);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.goButton);
             this.Controls.Add(this.backButton);
@@ -161,11 +161,11 @@
         private System.Windows.Forms.Button goButton;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.ImageList iconList;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label fileNameLabel;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label fileTypeLabel;
         private System.Windows.Forms.ComboBox filePathTextBox;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label fileTypeLabel;
+        private System.Windows.Forms.Label fileNameLabel;
     }
 }
 
