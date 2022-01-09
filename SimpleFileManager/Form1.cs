@@ -161,17 +161,30 @@ namespace SimpleFileManager
         private void listView1_ItemSelectionChanged(object sender, ListViewItemSelectionChangedEventArgs e)
         {
             currentlySelectedItemName = e.Item.Text;
+            if (currentlySelectedItemName.Split('.').Length > 1)
+            {
+                fileNameLabel.Text = currentlySelectedItemName;
+                fileTypeLabel.Text = currentlySelectedItemName.Split('.')[1];
+            }
+            try
+            {
+                FileAttributes fileAttr = File.GetAttributes(filePathTextBox.Text + "/" + currentlySelectedItemName);
+                if ((fileAttr & FileAttributes.Directory) == FileAttributes.Directory)
+                {
+                    isFile = false;
+                    filePathTextBox.Text = filePathTextBox.Text + "/" + currentlySelectedItemName;
+                }
+                else
+                {
+                    isFile = true;
+                }
+            }
+            catch (Exception)
+            {
 
-            FileAttributes fileAttr = File.GetAttributes(filePathTextBox.Text + "/" + currentlySelectedItemName);
-            if((fileAttr & FileAttributes.Directory) == FileAttributes.Directory)
-            {
-                isFile = false;
-                filePathTextBox.Text = filePathTextBox.Text + "/" + currentlySelectedItemName;
+
             }
-            else
-            {
-                isFile = true;
-            }
+
         }
 
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
